@@ -1,0 +1,1183 @@
+Program.Sub.ScreenSU.Start
+gui.Form1..create
+gui.Form1..caption("Export AR Data to Excel")
+gui.Form1..size(5670,4815)
+gui.Form1..minx(0)
+gui.Form1..miny(0)
+gui.Form1..position(3000,0)
+gui.Form1..event(unload,form1_unload)
+gui.Form1..alwaysontop(False)
+gui.Form1..fontname("Arial")
+gui.Form1..fontsize(8)
+gui.Form1..forecolor(0)
+gui.Form1..fontstyle(,,,,)
+gui.Form1..BackColor(-2147483633)
+gui.Form1..controlbox(True)
+gui.Form1..maxbutton(False)
+gui.Form1..minbutton(False)
+gui.Form1..mousepointer(0)
+gui.Form1..moveable(True)
+gui.Form1..sizeable(True)
+gui.Form1..ShowInTaskBar(True)
+gui.Form1..titlebar(True)
+gui.Form1.lblBegCust.create(label,"Beginning Customer",True,1935,255,1,200,260,True,0,Arial,8,-2147483633,0)
+gui.Form1.lblBegCust.defaultvalue("")
+gui.Form1.lblBegCust.controlgroup(0)
+gui.Form1.lblEndingCust.create(label,"Ending Customer",True,1935,255,1,3000,260,True,0,Arial,8,-2147483633,0)
+gui.Form1.lblEndingCust.defaultvalue("")
+gui.Form1.lblEndingCust.controlgroup(0)
+gui.Form1.txtBegCust.create(textbox,"",True,1650,300,0,200,585,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtBegCust.defaultvalue("")
+gui.Form1.txtBegCust.controlgroup(0)
+gui.Form1.txtEndingCust.create(textbox,"",True,1650,300,0,3000,585,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtEndingCust.defaultvalue("")
+gui.Form1.txtEndingCust.controlgroup(0)
+gui.Form1.cmdBegCustBrwse.create(button)
+gui.Form1.cmdBegCustBrwse.caption("^")
+gui.Form1.cmdBegCustBrwse.visible(True)
+gui.Form1.cmdBegCustBrwse.size(400,300)
+gui.Form1.cmdBegCustBrwse.zorder(0)
+gui.Form1.cmdBegCustBrwse.position(1985,585)
+gui.Form1.cmdBegCustBrwse.enabled(True)
+gui.Form1.cmdBegCustBrwse.fontname("Arial")
+gui.Form1.cmdBegCustBrwse.fontsize(8)
+gui.Form1.cmdBegCustBrwse.event(click,cmdbegcustbrwse_click)
+gui.Form1.cmdBegCustBrwse.defaultvalue("")
+gui.Form1.cmdBegCustBrwse.controlgroup(0)
+gui.Form1.cmdEndingCustBrwse.create(button)
+gui.Form1.cmdEndingCustBrwse.caption("^")
+gui.Form1.cmdEndingCustBrwse.visible(True)
+gui.Form1.cmdEndingCustBrwse.size(400,300)
+gui.Form1.cmdEndingCustBrwse.zorder(0)
+gui.Form1.cmdEndingCustBrwse.position(4775,585)
+gui.Form1.cmdEndingCustBrwse.enabled(True)
+gui.Form1.cmdEndingCustBrwse.fontname("Arial")
+gui.Form1.cmdEndingCustBrwse.fontsize(8)
+gui.Form1.cmdEndingCustBrwse.event(click,cmdendingcustbrwse_click)
+gui.Form1.cmdEndingCustBrwse.defaultvalue("")
+gui.Form1.cmdEndingCustBrwse.controlgroup(0)
+gui.Form1.dtpBegDate.create(datepicker)
+gui.Form1.dtpBegDate.visible(True)
+gui.Form1.dtpBegDate.size(1650,285)
+gui.Form1.dtpBegDate.zorder(0)
+gui.Form1.dtpBegDate.position(2100,5000)
+gui.Form1.dtpBegDate.enabled(True)
+gui.Form1.dtpBegDate.checkbox(False)
+gui.Form1.dtpBegDate.defaultvalue("")
+gui.Form1.dtpBegDate.controlgroup(0)
+gui.Form1.dtpEndingDate.create(datepicker)
+gui.Form1.dtpEndingDate.visible(True)
+gui.Form1.dtpEndingDate.size(1650,285)
+gui.Form1.dtpEndingDate.zorder(0)
+gui.Form1.dtpEndingDate.position(200,1845)
+gui.Form1.dtpEndingDate.enabled(True)
+gui.Form1.dtpEndingDate.checkbox(False)
+gui.Form1.dtpEndingDate.defaultvalue("")
+gui.Form1.dtpEndingDate.controlgroup(0)
+gui.Form1.lblReportType.create(label,"Detail or Summary?",True,1935,255,1,200,2495,True,0,Arial,8,-2147483633,0)
+gui.Form1.lblReportType.defaultvalue("")
+gui.Form1.lblReportType.controlgroup(0)
+gui.Form1.cmdExport.create(button)
+gui.Form1.cmdExport.caption("Export")
+gui.Form1.cmdExport.visible(True)
+gui.Form1.cmdExport.size(1500,500)
+gui.Form1.cmdExport.zorder(0)
+gui.Form1.cmdExport.position(200,3480)
+gui.Form1.cmdExport.enabled(True)
+gui.Form1.cmdExport.fontname("Arial")
+gui.Form1.cmdExport.fontsize(8)
+gui.Form1.cmdExport.event(click,cmdexport_click)
+gui.Form1.cmdExport.defaultvalue("")
+gui.Form1.cmdExport.controlgroup(0)
+gui.Form1.lblBegInvoiceDate.create(label,"Beginning Invoice Date",True,1935,255,1,1300,5100,True,0,Arial,8,-2147483633,0)
+gui.Form1.lblBegInvoiceDate.defaultvalue("")
+gui.Form1.lblBegInvoiceDate.controlgroup(0)
+gui.Form1.lblEndingInvoiceDate.create(label,"CutOff Date",True,1485,255,1,200,1590,True,0,Arial,8,-2147483633,0)
+gui.Form1.lblEndingInvoiceDate.defaultvalue("")
+gui.Form1.lblEndingInvoiceDate.controlgroup(0)
+gui.Form1.ddlType.create(dropdownlist)
+gui.Form1.ddlType.visible(True)
+gui.Form1.ddlType.size(1650,330)
+gui.Form1.ddlType.zorder(0)
+gui.Form1.ddlType.position(200,2825)
+gui.Form1.ddlType.enabled(True)
+gui.Form1.ddlType.fontname("Arial")
+gui.Form1.ddlType.fontsize(8)
+gui.Form1.ddlType.defaultvalue("")
+gui.Form1.ddlType.controlgroup(0)
+gui.Form1.chkAllCust.create(checkbox)
+gui.Form1.chkAllCust.caption("Include All Customers")
+gui.Form1.chkAllCust.visible(True)
+gui.Form1.chkAllCust.size(2100,255)
+gui.Form1.chkAllCust.zorder(0)
+gui.Form1.chkAllCust.position(200,1145)
+gui.Form1.chkAllCust.enabled(True)
+gui.Form1.chkAllCust.alignment(0)
+gui.Form1.chkAllCust.fontname("Arial")
+gui.Form1.chkAllCust.fontsize(8)
+gui.Form1.chkAllCust.event(click,chkallcust_click)
+gui.Form1.chkAllCust.defaultvalue("")
+gui.Form1.chkAllCust.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.uSummaryFinal.Define("L31",String)
+Variable.UDT.uSummaryFinal.Define("3145",String)
+Variable.UDT.uSummaryFinal.Define("4655",String)
+Variable.UDT.uSummaryFinal.Define("5660",String)
+Variable.UDT.uSummaryFinal.Define("O60",String)
+Variable.UDT.uSummaryFinal.Define("OPEN_BAL",String)
+Variable.UDT.uSummaryFinal.Define("AMT",Float,AMT)
+Variable.UDT.uSummaryFinal.Define("SALESPERSON",String,SALESPERSON)
+Variable.UDT.uSummaryFinal.Define("CUSTOMER",String,CUSTOMER)
+Variable.UDT.uSummaryFinal.Define("TERMS",String,TERMS)
+Variable.UDT.uSummaryFinal.Define("NAME_CUSTOMER",String,NAME_CUSTOMER)
+Variable.UDT.uSummaryFinal.Define("DATE_TRANSACTION",Date,DATE_TRANSACTION)
+Variable.UDT.uSummaryFinal.Define("DATE_INVOICE",Date,DATE_INVOICE)
+Variable.uGlobal.uSummaryFinal.Declare("uSummaryFinal")
+Variable.UDT.uSummary.Define("CUSTOMER",String,CUSTOMER)
+Variable.uGlobal.uSummary.Declare("uSummary")
+Variable.Global.f31.Declare(Float,0)
+Variable.Global.f3145.Declare(Float,0)
+Variable.Global.f4655.Declare(Float,0)
+Variable.Global.f5660.Declare(Float,0)
+Variable.Global.fO60.Declare(Float,0)
+Variable.Global.fGrand.Declare(Float,0)
+Variable.UDT.uDetail.Define("CUSTOMER",String,CUSTOMER)
+Variable.uGlobal.uDetail.Declare("uDetail")
+Variable.UDT.uDetailFinal.Define("CUSTOMER",String,CUSTOMER)
+Variable.UDT.uDetailFinal.Define("TERMS",String,TERMS)
+Variable.UDT.uDetailFinal.Define("SALESPERSON",String,SALESPERSON)
+Variable.UDT.uDetailFinal.Define("NAME_CUSTOMER",String,NAME_CUSTOMER)
+Variable.UDT.uDetailFinal.Define("INVOICE",String,INVOICE)
+Variable.UDT.uDetailFinal.Define("PURCHASE_ORDER",String)
+Variable.UDT.uDetailFinal.Define("AMT",Float,AMT)
+Variable.UDT.uDetailFinal.Define("DATE_INVOICE",Date,DATE_INVOICE)
+Variable.UDT.uDetailFinal.Define("5660",String)
+Variable.UDT.uDetailFinal.Define("4655",String)
+Variable.UDT.uDetailFinal.Define("3145",String)
+Variable.UDT.uDetailFinal.Define("L31",String)
+Variable.UDT.uDetailFinal.Define("O60",String)
+Variable.uGlobal.uDetailFinal.Declare("uDetailFinal")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'This will be a custom GAB Script that will run from a new menu item under Accounts Receivable -> Reports -> AR Aging Excel.
+' In this version the user will be able to select an Invoice Date Range or all Invoice Date Ranges, an either Summary or Detail for the Report.
+'There will be an additional selection for Customer, by either a range of customers or all Customers.
+'Coded by WAW
+'Date: 6/24/2016
+
+'open connection
+F.odbc.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,100000)
+
+F.ODBC.Connection!con.OpenConnection(Variable.Ambient.Ccon,Variable.Ambient.Cuser,Variable.Ambient.Cpass,100000)
+
+'add detail/summary to the drop down list
+Gui.Form1.ddlType.AddItem("Detail")
+Gui.Form1.ddlType.AddItem("Summary")
+
+'display the form
+Gui.Form1..Visible(true)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.cmdbegcustbrwse_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbegcustbrwse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sret.Declare(String)
+
+'set browser type ahead
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+'display browser for customer
+Function.Intrinsic.UI.Browser(205,"",Variable.Local.sRet)
+Function.Intrinsic.Control.If(Variable.Local.sRet,"=","***CANCEL***")
+	 Function.Intrinsic.UI.Msgbox("No customer was selected!")
+Function.Intrinsic.Control.Else
+	 Function.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+	'set the textboxes with customer selected
+	Gui.Form1.txtBegCust.Text(V.Local.sret(0))
+	Gui.Form1.txtEndingCust.Text(V.Local.sret(0))
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbegcustbrwse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbegcustbrwse_click.End
+
+program.sub.cmdendingcustbrwse_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdendingcustbrwse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sret.Declare(String)
+
+'set browser type ahead
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+'display browser for customer
+Function.Intrinsic.UI.Browser(205,"",Variable.Local.sRet)
+Function.Intrinsic.Control.If(Variable.Local.sRet,"=","***CANCEL***")
+	 Function.Intrinsic.UI.Msgbox("No customer was selected!")
+Function.Intrinsic.Control.Else
+	 Function.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+	'set the textboxes with customer selected
+	Gui.Form1.txtEndingCust.Text(V.Local.sret(0))
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdendingcustbrwse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdendingcustbrwse_click.End
+
+program.sub.cmdexport_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdexport_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'make sure a customer range was selected
+F.Intrinsic.Control.If(V.Screen.Form1!txtBegCust.Text,=,"")
+F.Intrinsic.Control.AndIf(V.Screen.Form1!chkAllCust.Value,=,0)
+	F.Intrinsic.UI.Msgbox("Please select a customer range.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Elseif(V.Screen.Form1!txtEndingCust.Text,=,"")
+F.Intrinsic.Control.AndIf(V.Screen.Form1!chkAllCust.Value,=,0)
+	F.Intrinsic.UI.Msgbox("Please select a customer range.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'check to make sure the ddl isn't blank
+F.Intrinsic.Control.If(V.Screen.Form1!ddlType.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a report type.")
+	F.Intrinsic.Control.ExitSub
+'otherwise call the appropriate sub
+F.Intrinsic.Control.ElseIf(V.Screen.Form1!ddlType.Text,=,"Detail")
+	'close the form
+	Gui.Form1..Visible(false)
+	F.Intrinsic.Control.CallSub(Detail)
+F.Intrinsic.Control.ElseIf(V.Screen.Form1!ddlType.Text,=,"Summary")
+	'close the form
+	Gui.Form1..Visible(false)
+	F.Intrinsic.Control.CallSub(Summary)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdexport_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdexport_click.End
+
+program.sub.form1_unload.start
+F.Intrinsic.Control.SetErrorHandler("form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'close connection to the database
+F.ODBC.Connection!conx.Close
+
+'close connection to the database
+F.ODBC.Connection!con.Close
+
+'end the program
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.form1_unload.End
+
+Program.Sub.Detail.Start
+F.Intrinsic.Control.SetErrorHandler("Detail_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sbegdate.Declare(String)
+V.Local.senddate.Declare(String)
+V.Local.scurrentdate.Declare(String)
+V.Local.ssql.Declare(String)
+V.Local.sfile.Declare(String)
+V.Local.bexists.Declare(Boolean)
+V.Local.sret.Declare(String)
+V.Local.iret.Declare(Long)
+V.Local.ifinalubound.Declare(Float)
+V.Local.stermssql.Declare(String)
+V.Local.dinvdate.Declare(Date)
+V.Local.dl31.Declare(Date)
+V.Local.scompl31.Declare(String)
+V.Local.d3145.Declare(Date)
+V.Local.scomp3145.Declare(String)
+V.Local.d4655.Declare(String)
+V.Local.scomp4655.Declare(String)
+V.Local.d5660.Declare(Date)
+V.Local.scomp5660.Declare(String)
+V.Local.dO60.Declare(String)
+V.Local.scompO60.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.sposql.Declare(String)
+V.Local.spo.Declare(String)
+V.Local.sinvdate.Declare(String)
+
+'open dialog
+F.Intrinsic.UI.InvokeWaitDialog("Generating export...")
+
+'set the date values
+V.Local.sbegdate.Set(V.Screen.Form1!dtpBegDate.Value)
+V.Local.senddate.Set(V.Screen.Form1!dtpEndingDate.Value)
+
+'set the date
+F.Intrinsic.String.Format(V.Ambient.Date,"YYYY-MM-DD",V.Local.scurrentdate)
+
+F.Intrinsic.String.Format(V.Local.sbegdate,"YYYY-MM-DD",V.Local.sbegdate)
+F.Intrinsic.String.Format(V.Local.senddate,"YYYY-MM-DD",V.Local.senddate)
+
+'redim the udt
+V.uGlobal.uDetail.Redim(-1,-1)
+
+'select all the customers in ar open items
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllCust.Value,=,1)
+	F.Intrinsic.String.Build("Select distinct Customer from V_AR_OPEN_ITEMS where CUSTOMER <> '{0}'","",V.Local.ssql)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select distinct Customer from V_AR_OPEN_ITEMS where CUSTOMER BETWEEN '{0}' and '{1}'",V.Screen.Form1!txtBegCust.text,V.screen.Form1!txtEndingCust.Text,V.Local.ssql)
+F.Intrinsic.Control.EndIf
+
+'select all the customers in ar open items
+'F.Intrinsic.String.Build("Select distinct Customer from V_AR_OPEN_ITEMS where CUSTOMER BETWEEN '{0}' and '{1}'",V.Screen.Form1!txtBegCust.text,V.screen.Form1!txtEndingCust.Text,V.Local.ssql)
+F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+'load them to the uContact UDT
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uDetail",True)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'loop through the customers, get their invoices and get their ar status, if they have an ar status greater than 0 set their DELETE to NO
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uDetail.lbound,V.uGlobal.uDetail.UBound,1)
+'	F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON, AMT_INVOICE as AMT, DATE_INVOICE, TERMS_CODE as TERMS from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_TRANSACTION between '{2}' and '{3}'",V.uGlobal.uDetail(v.Local.i)!CUSTOMER,"",V.local.sbegdate,V.local.senddate,V.Local.ssql)
+
+'	F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON, AMT_INVOICE as AMT, DATE_INVOICE, TERMS_CODE as TERMS from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_INVOICE between '{2}' and '{3}' and BATCH_CODE = '{4}'",V.uGlobal.uDetail(v.Local.i)!CUSTOMER,"",V.local.sbegdate,V.local.senddate,"10",V.Local.ssql)
+'F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON, AMT_INVOICE as AMT, DATE_INVOICE, TERMS_CODE as TERMS from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_TRANSACTION between '{2}' and '{3}' and BATCH_CODE = '{4}'",V.uGlobal.uDetail(v.Local.i)!CUSTOMER,"",V.local.sbegdate,V.local.senddate,"10",V.Local.ssql)
+'F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON, AMT_INVOICE as AMT, DATE_INVOICE, TERMS_CODE as TERMS from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_TRANSACTION <= '{2}' ",V.uGlobal.uDetail(v.Local.i)!CUSTOMER,"",V.local.senddate,"10",V.Local.ssql)
+
+F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON,DATE_INVOICE, TERMS_CODE as TERMS from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_TRANSACTION <= '{2}' ",V.uGlobal.uDetail(v.Local.i)!CUSTOMER,"",V.local.senddate,"10",V.Local.ssql)
+	F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSql)
+'F.Intrinsic.Debug.InvokeDebugger
+
+F.Intrinsic.Debug.Stop
+
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		'get those with an outstanding AR ballance and add them to the ucontactfinalUDT
+		F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+			F.Intrinsic.Control.If(V.odbc.conx!rst.FieldValTrim!INVOICE,=,"000267")
+'			F.Intrinsic.Control.If(V.odbc.conx!rst.FieldValTrim!INVOICE,=,"667502")
+'				F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Build(" Select  sum(AMT_INVOICE) as AMT  from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE = '{1}' and DATE_TRANSACTION <= '{2}' ",V.uGlobal.uDetail(v.Local.i)!CUSTOMER,V.odbc.conx!rst.FieldValTrim!INVOICE,V.local.senddate,V.Local.ssql)
+	F.ODBC.Connection!conX.OpenRecordsetRO("rst1",V.Local.sSql)
+'			F.Global.Accounting.GetARItemStatus(v.uGlobal.uDetail(v.Local.i)!CUSTOMER,v.odbc.conx!rst.FieldValTrim!INVOICE,v.Local.sRet)
+			F.Intrinsic.Control.If(V.odbc.conx!rst1.FieldVal!AMT,<>,0)
+'				F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'				F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(2).Trim,V.Local.iRet)
+				'if there is a return greater than zero flag them as no
+'				F.Intrinsic.Control.If(V.Local.iRet,<>,0)
+					'check to see if the ubound of the finaludt is >1
+					F.Intrinsic.Control.If(V.local.ifinalubound,>,0)
+						'add one and redim the ufinalcontact UDT
+						V.uGlobal.uDetailFinal.Redimpreserve(0,V.Local.ifinalubound)
+						'manually add the items to the UDT
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!CUSTOMER.Set(V.ODBC.conx!rst.FieldValTrim!CUSTOMER)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!SALESPERSON.Set(V.ODBC.conx!rst.FieldValTrim!SALESPERSON)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!AMT.Set(V.ODBC.conx!rst1.FieldVal!AMT)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!DATE_INVOICE.Set(V.ODBC.conx!rst.FieldValTrim!DATE_INVOICE)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!INVOICE.Set(V.ODBC.conx!rst.FieldValTrim!INVOICE)
+						'Need to check and make sure that the Terms_Code isn't NULL
+						F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldValTrim!TERMS,<>,V.Ambient.Null)
+							'get the terms for the invoice
+							F.Intrinsic.String.Build("Select TERMS_MESSAGE from V_AR_TERMS where TERMS_CODE = '{0}'",V.ODBC.conx!rst.FieldValTrim!TERMS,V.Local.stermssql)
+							F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+							F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+								V.uGlobal.uDetailFinal(v.Local.ifinalubound)!TERMS.Set(V.ODBC.conx!rstterms.FieldValTrim!TERMS_MESSAGE)
+								F.Intrinsic.String.Replace(V.uGlobal.uDetailFinal(v.Local.ifinalubound)!TERMS,","," ",V.uGlobal.uDetailFinal(V.Local.ifinalubound)!TERMS)
+							F.Intrinsic.Control.EndIf
+							F.ODBC.conx!rstterms.Close
+						F.Intrinsic.Control.EndIf
+						'get the customer's name
+						F.Intrinsic.String.Build("Select NAME_CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'",V.ODBC.conx!rst.FieldValTrim!CUSTOMER,V.Local.stermssql)
+						F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+						F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+							V.uGlobal.uDetailFinal(v.Local.ifinalubound)!NAME_CUSTOMER.Set(V.ODBC.conx!rstterms.FieldValTrim!NAME_CUSTOMER)
+						F.Intrinsic.Control.EndIf
+						F.ODBC.conx!rstterms.Close
+						F.Intrinsic.math.Add(V.Local.ifinalubound,1,V.Local.ifinalubound)
+					'otherwise load them at 0
+					F.Intrinsic.Control.Else
+						V.uGlobal.uDetailFinal.Redim(0,0)
+						'manually add the items to the UDT
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!CUSTOMER.Set(V.ODBC.conx!rst.FieldValTrim!CUSTOMER)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!SALESPERSON.Set(V.ODBC.conx!rst.FieldValTrim!SALESPERSON)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!AMT.Set(V.ODBC.conx!rst1.FieldValTrim!AMT)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!DATE_INVOICE.Set(V.ODBC.conx!rst.FieldValTrim!DATE_INVOICE)
+						V.uGlobal.uDetailFinal(v.Local.ifinalubound)!INVOICE.Set(V.ODBC.conx!rst.FieldValTrim!INVOICE)
+						'We need to check and make sure that the Terms_Code isn't NULL
+						F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldValTrim!TERMS,<>,V.Ambient.Null)
+							'get the terms for the invoice
+							F.Intrinsic.String.Build("Select TERMS_MESSAGE from V_AR_TERMS where TERMS_CODE = '{0}'",V.ODBC.conx!rst.FieldValTrim!TERMS,V.Local.stermssql)
+							F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+
+							F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+								V.uGlobal.uDetailFinal(v.Local.ifinalubound)!TERMS.Set(V.ODBC.conx!rstterms.FieldValTrim!TERMS_MESSAGE)
+								F.Intrinsic.String.Replace(V.uGlobal.uDetailFinal(v.Local.ifinalubound)!TERMS,","," ",V.uGlobal.uDetailFinal(V.Local.ifinalubound)!TERMS)
+							F.Intrinsic.Control.EndIf
+
+							F.ODBC.conx!rstterms.Close
+						F.Intrinsic.Control.EndIf
+						'get the customer's name
+						F.Intrinsic.String.Build("Select NAME_CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'",V.ODBC.conx!rst.FieldValTrim!CUSTOMER,V.Local.stermssql)
+						F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+						F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+							V.uGlobal.uDetailFinal(v.Local.ifinalubound)!NAME_CUSTOMER.Set(V.ODBC.conx!rstterms.FieldValTrim!NAME_CUSTOMER)
+						F.Intrinsic.Control.EndIf
+						F.ODBC.conx!rstterms.Close
+						F.Intrinsic.math.Add(V.Local.ifinalubound,1,V.Local.ifinalubound)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rst1.Close
+'			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rst.MoveNext
+			Function.Intrinsic.Control.Loop
+		F.Intrinsic.Control.Else
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.Next(V.Local.i)
+
+'set the remaining field references
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDetailfinal!L31,"L31")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDetailfinal!3145,"3145")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDetailfinal!4655,"4655")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDetailfinal!5660,"5660")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDetailfinal!O60,"O60")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDetailfinal!PURCHASE_ORDER,"PURCHASE_ORDER")
+
+'loop through and begin setting the date ranges
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uDetailFinal.lbound,V.uGlobal.uDetailFinal.UBound,1)
+
+		'get the purchase order based on the invoice
+		F.Intrinsic.string.Build("Select CUSTOMER_PO from V_ORDER_HEADER where INVOICE = '{0}'",V.uGlobal.uDetailFinal(v.Local.i)!INVOICE,V.Local.sposql)
+	F.ODBC.Connection!conX.OpenRecordsetRO("rstPO",V.Local.spoSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rstPO.EOF,<>,True)
+		V.uGlobal.uDetailFinal(v.Local.i)!PURCHASE_ORDER.Set(V.ODBC.conx!rstPO.FieldValTrim!CUSTOMER_PO)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstPO.Close
+
+	'set the invoice date and then format it
+'	V.local.sinvdate.set(V.uGlobal.uDetailfinal(v.Local.i)!date_invoice)
+'	F.Intrinsic.date.convertDstring(V.Local.sinvdate,"YYYY-MM-DD",V.Local.dinvdate)
+
+'	V.local.dinvdate.set(V.uGlobal.uDetailfinal(v.Local.i)!date_invoice)
+'	F.Intrinsic.String.Format(V.local.dinvdate,"YYYY-MM-DD",V.local.dinvdate)
+
+			F.Intrinsic.Control.If(V.uGlobal.uDetailFinal(v.Local.i)!INVOICE,=,"671417")
+'			F.Intrinsic.Control.If(V.odbc.conx!rst.FieldValTrim!INVOICE,=,"667502")
+'				F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.EndIf
+
+
+	F.Intrinsic.String.Format(V.uGlobal.uDetailFinal(v.Local.i)!DATE_INVOICE,"YYYY-MM-DD",V.Local.dinvdate)
+
+	'less than 31 days
+	F.Intrinsic.Date.DateAdd("D",30,V.local.dinvdate,V.Local.dL31)
+	F.Intrinsic.String.Format(V.local.dL31,"YYYY-MM-DD",V.local.scompl31)
+
+	'between 31 and 45
+	F.Intrinsic.Date.DateAdd("D",45,V.local.dinvdate,V.Local.d3145)
+	F.Intrinsic.String.Format(V.local.d3145,"YYYY-MM-DD",V.local.scomp3145)
+
+	'between 46 and 55
+	F.Intrinsic.Date.DateAdd("D",55,V.local.dinvdate,V.Local.d4655)
+	F.Intrinsic.String.Format(V.local.d4655,"YYYY-MM-DD",V.local.scomp4655)
+
+	'between 56 and 60
+	F.Intrinsic.Date.DateAdd("D",60,V.local.dinvdate,V.Local.d5660)
+	F.Intrinsic.String.Format(V.local.d5660,"YYYY-MM-DD",V.local.scomp5660)
+
+	'or 60
+	F.Intrinsic.Date.DateAdd("D",61,V.local.dinvdate,V.Local.dO60)
+	F.Intrinsic.String.Format(V.local.dO60,"YYYY-MM-DD",V.local.scompO60)
+
+	'check to see if less than 31 days
+	F.Intrinsic.Control.If(V.local.scurrentdate,<=,V.Local.scompl31)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp3145)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp4655)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp5660)
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scompO60)
+		V.uGlobal.uDetailFinal(v.Local.i)!L31.Set(V.uGlobal.uDetailFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.f31,V.uGlobal.uDetailFinal(v.Local.i)!AMT,V.Global.f31)
+'	F.Intrinsic.Control.EndIf
+
+	'31 - 45
+	F.Intrinsic.Control.elseIf(V.local.scurrentdate,>=,V.Local.scompl31)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp3145)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp4655)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp5660)
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scompO60)
+		V.uGlobal.uDetailFinal(v.Local.i)!3145.Set(V.uGlobal.uDetailFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.f3145,V.uGlobal.uDetailFinal(v.Local.i)!AMT,V.Global.f3145)
+	'46 - 55
+	F.Intrinsic.Control.ElseIf(V.Local.scurrentdate,>=,V.Local.scomp3145)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp4655)
+'ranjit
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,>=,V.Local.scomp4655)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp5660)
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scompO60)
+		V.uGlobal.uDetailFinal(v.Local.i)!4655.Set(V.uGlobal.uDetailFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.f4655,V.uGlobal.uDetailFinal(v.Local.i)!AMT,V.Global.f4655)
+	'56-60
+F.Intrinsic.Debug.Stop
+
+	F.Intrinsic.Control.elseIf(V.Local.scurrentdate,>=,V.Local.scomp4655)
+'	F.Intrinsic.Control.elseIf(V.Local.scurrentdate,>=,V.Local.scomp5660)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<,V.Local.scomp5660)
+		V.uGlobal.uDetailFinal(v.Local.i)!5660.Set(V.uGlobal.uDetailFinal(v.Local.i)!AMT)
+		F.Intrinsic.math.Add(V.Global.f5660,V.uGlobal.uDetailFinal(v.Local.i)!AMT,V.Global.f5660)
+	'over 60
+	F.Intrinsic.Control.ElseIf(V.Local.scurrentdate,>=,V.Local.scompO60)
+		V.uGlobal.uDetailFinal(v.Local.i)!O60.Set(V.uGlobal.uDetailFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.fO60,V.uGlobal.uDetailFinal(v.Local.i)!AMT,V.global.fO60)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Next(V.Local.i)
+
+'get a total of all outstanding items
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f31,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f3145,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f4655,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f5660,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.fO60,V.Global.fGrand)
+
+'call the summary export sub
+F.Intrinsic.Control.CallSub(Detailexport)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Detail_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Detail.End
+
+Program.Sub.Summary.Start
+F.Intrinsic.Control.SetErrorHandler("Summary_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.sbegdate.Declare(String)
+V.Local.senddate.Declare(String)
+V.Local.sfile.Declare(String)
+V.Local.bexists.Declare(Boolean)
+V.Local.ssql.Declare(String)
+V.Local.sret.Declare(String)
+V.Local.iret.Declare(Long)
+V.Local.ifinalubound.Declare(Float)
+V.Local.stermssql.Declare(String)
+V.Local.dinvdate.Declare(Date)
+V.Local.dl31.Declare(Date)
+V.Local.scompl31.Declare(String)
+V.Local.d3145.Declare(Date)
+V.Local.scomp3145.Declare(String)
+V.Local.d4655.Declare(String)
+V.Local.scomp4655.Declare(String)
+V.Local.d5660.Declare(Date)
+V.Local.scomp5660.Declare(String)
+V.Local.dO60.Declare(String)
+V.Local.scompO60.Declare(String)
+V.Local.scurrentdate.Declare(String)
+V.Local.sposql.Declare(String)
+V.Local.sinvdate.Declare(String)
+
+'open dialog
+F.Intrinsic.UI.InvokeWaitDialog("Generating export...")
+
+'set the date values
+
+V.Local.sbegdate.Set(V.Screen.Form1!dtpBegDate.Value)
+V.Local.senddate.Set(V.Screen.Form1!dtpEndingDate.Value)
+
+'set the date
+F.Intrinsic.String.Format(V.Ambient.Date,"YYYY-MM-DD",V.Local.scurrentdate)
+
+F.Intrinsic.String.Format(V.Local.sbegdate,"YYYY-MM-DD",V.Local.sbegdate)
+F.Intrinsic.String.Format(V.Local.senddate,"YYYY-MM-DD",V.Local.senddate)
+
+'redim the udt
+V.uGlobal.uSummary.Redim(-1,-1)
+
+'select all the customers in ar open items
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllCust.Value,=,1)
+	F.Intrinsic.String.Build("Select distinct Customer from V_AR_OPEN_ITEMS where CUSTOMER <> '{0}'","",V.Local.ssql)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select distinct Customer from V_AR_OPEN_ITEMS where CUSTOMER BETWEEN '{0}' and '{1}'",V.Screen.Form1!txtBegCust.text,V.screen.Form1!txtEndingCust.Text,V.Local.ssql)
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.String.Build("Select distinct Customer from V_AR_OPEN_ITEMS where CUSTOMER BETWEEN '{0}' and '{1}'",V.Screen.Form1!txtBegCust.text,V.screen.Form1!txtEndingCust.Text,V.Local.ssql)
+F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+'load them to the uContact UDT
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uSummary",True)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+
+'loop through the customers, get their invoices and get their ar status, if they have an ar status greater than 0 set their DELETE to NO
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uSummary.lbound,V.uGlobal.uSummary.UBound,1)
+'	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uContact!DELETE,"DELETE")
+'	F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON, AMT_INVOICE as AMT, DATE_INVOICE, TERMS_CODE as TERMS, DATE_TRANSACTION from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_TRANSACTION between '{2}' and '{3}'",V.uGlobal.uSummary(v.Local.i)!CUSTOMER,"",V.local.sbegdate,V.local.senddate,V.Local.ssql)
+
+'	F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON, AMT_INVOICE as AMT, DATE_INVOICE, TERMS_CODE as TERMS, DATE_TRANSACTION from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_INVOICE between '{2}' and '{3}' and BATCH_CODE = '{4}'",V.uGlobal.uSummary(v.Local.i)!CUSTOMER,"",V.local.sbegdate,V.local.senddate,"10",V.Local.ssql)
+'F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON, AMT_INVOICE as AMT, DATE_INVOICE, TERMS_CODE as TERMS, DATE_TRANSACTION from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_TRANSACTION between '{2}' and '{3}' and BATCH_CODE = '{4}'",V.uGlobal.uSummary(v.Local.i)!CUSTOMER,"",V.local.sbegdate,V.local.senddate,"10",V.Local.ssql)
+F.Intrinsic.String.Build(" Select CUSTOMER, INVOICE, SALESPERSON,DATE_INVOICE, TERMS_CODE as TERMS,DATE_TRANSACTION from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE <> '{1}' and DATE_TRANSACTION <= '{2}' ",V.uGlobal.uSummary(v.Local.i)!CUSTOMER,"",V.local.senddate,"10",V.Local.ssql)
+
+	F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		'get those with an outstanding AR ballance and add them to the ucontactfinalUDT
+		F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+
+			F.Intrinsic.String.Build(" Select  sum(AMT_INVOICE) as AMT  from V_AR_OPEN_ITEMS where CUSTOMER = '{0}' and INVOICE = '{1}' and DATE_TRANSACTION <= '{2}' ",V.uGlobal.uSummary(v.Local.i)!CUSTOMER,V.odbc.conx!rst.FieldValTrim!INVOICE,V.local.senddate,V.Local.ssql)
+			F.ODBC.Connection!conX.OpenRecordsetRO("rst1",V.Local.sSql)
+			F.Intrinsic.Control.If(V.odbc.conx!rst1.FieldVal!AMT,<>,0)
+'			F.Global.Accounting.GetARItemStatus(v.uGlobal.uSummary(v.Local.i)!CUSTOMER,v.odbc.conx!rst.FieldValTrim!INVOICE,v.Local.sRet)
+'			F.Intrinsic.Control.If(V.Local.sRet,<>,"***NORETURN***")
+'				F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'				F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(2).Trim,V.Local.iRet)
+'				'if there is a return greater than zero flag them as no
+'				F.Intrinsic.Control.If(V.Local.iRet,<>,0)
+'					'check to see if the ubound of the finaludt is >1
+					F.Intrinsic.Control.If(V.local.ifinalubound,>,0)
+						'add one and redim the ufinalcontact UDT
+						V.uGlobal.uSummaryFinal.Redimpreserve(0,V.Local.ifinalubound)
+						'manually add the items to the UDT
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!CUSTOMER.Set(V.ODBC.conx!rst.FieldValTrim!CUSTOMER)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!SALESPERSON.Set(V.ODBC.conx!rst.FieldValTrim!SALESPERSON)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!AMT.Set(V.ODBC.conx!rst1.FieldValTrim!AMT)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!DATE_INVOICE.Set(V.ODBC.conx!rst.FieldValTrim!DATE_INVOICE)
+						'date transaction represents the last payment date
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!DATE_TRANSACTION.Set(V.ODBC.conx!rst.FieldValTrim!DATE_TRANSACTION)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!OPEN_BAL.Set(V.local.iret)
+						
+						'We need to check to make sure the Terms Code isn't null
+						F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldValTrim!TERMS,<>,V.Ambient.Null)
+							'get the terms for the invoice
+							F.Intrinsic.String.Build("Select TERMS_MESSAGE from V_AR_TERMS where TERMS_CODE = '{0}'",V.ODBC.conx!rst.FieldValTrim!TERMS,V.Local.stermssql)
+							F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+							F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+								V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!TERMS.Set(V.ODBC.conx!rstterms.FieldValTrim!TERMS_MESSAGE)
+								F.Intrinsic.String.Replace(V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!TERMS,","," ",V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!TERMS)
+							F.Intrinsic.Control.EndIf
+							F.ODBC.conx!rstterms.Close
+						F.Intrinsic.Control.EndIf
+						
+						'get the customer's name
+						F.Intrinsic.String.Build("Select NAME_CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'",V.ODBC.conx!rst.FieldValTrim!CUSTOMER,V.Local.stermssql)
+						F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+						F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+							V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!NAME_CUSTOMER.Set(V.ODBC.conx!rstterms.FieldValTrim!NAME_CUSTOMER)
+						F.Intrinsic.Control.EndIf
+						F.ODBC.conx!rstterms.Close
+						F.Intrinsic.math.Add(V.Local.ifinalubound,1,V.Local.ifinalubound)
+					'otherwise load them at 0
+					F.Intrinsic.Control.Else
+						V.uGlobal.uSummaryFinal.Redim(0,0)
+						'manually add the items to the UDT
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!CUSTOMER.Set(V.ODBC.conx!rst.FieldValTrim!CUSTOMER)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!SALESPERSON.Set(V.ODBC.conx!rst.FieldValTrim!SALESPERSON)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!AMT.Set(V.ODBC.conx!rst1.FieldValTrim!AMT)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!DATE_INVOICE.Set(V.ODBC.conx!rst.FieldValTrim!DATE_INVOICE)
+						'date transaction represents the last payment date
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!DATE_TRANSACTION.Set(V.ODBC.conx!rst.FieldValTrim!DATE_TRANSACTION)
+						V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!OPEN_BAL.Set(V.local.iret)
+						
+						'We need to check to make sure the terms code isn't null
+						F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldValTrim!TERMS,<>,V.Ambient.Null)
+							'get the terms for the invoice
+							F.Intrinsic.String.Build("Select TERMS_MESSAGE from V_AR_TERMS where TERMS_CODE = '{0}'",V.ODBC.conx!rst.FieldValTrim!TERMS,V.Local.stermssql)
+							F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+							F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+								V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!TERMS.Set(V.ODBC.conx!rstterms.FieldValTrim!TERMS_MESSAGE)
+								F.Intrinsic.String.Replace(V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!TERMS,","," ",V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!TERMS)
+							F.Intrinsic.Control.EndIf
+							F.ODBC.conx!rstterms.Close
+						F.Intrinsic.Control.EndIf	
+							
+						'get the customer's name
+						F.Intrinsic.String.Build("Select NAME_CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'",V.ODBC.conx!rst.FieldValTrim!CUSTOMER,V.Local.stermssql)
+						F.ODBC.Connection!conX.OpenRecordsetRO("rstterms",V.Local.stermsSql)
+						F.Intrinsic.Control.If(V.ODBC.conX!rstterms.EOF,<>,True)
+							V.uGlobal.uSummaryFinal(v.Local.ifinalubound)!NAME_CUSTOMER.Set(V.ODBC.conx!rstterms.FieldValTrim!NAME_CUSTOMER)
+						F.Intrinsic.Control.EndIf
+						F.ODBC.conx!rstterms.Close
+						F.Intrinsic.math.Add(V.Local.ifinalubound,1,V.Local.ifinalubound)
+					F.Intrinsic.Control.EndIf
+'				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rst1.Close
+			F.ODBC.conx!rst.MoveNext
+			Function.Intrinsic.Control.Loop
+		F.Intrinsic.Control.Else
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.Next(V.Local.i)
+
+'set the remaining field references
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSummaryfinal!L31,"L31")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSummaryfinal!3145,"3145")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSummaryfinal!4655,"4655")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSummaryfinal!5660,"5660")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSummaryfinal!O60,"O60")
+
+F.Intrinsic.Debug.Stop
+
+'loop through and begin setting the date ranges
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uSummaryFinal.lbound,V.uGlobal.uSummaryFinal.UBound,1)
+
+'
+'	V.local.sinvdate.set(V.uGlobal.uSummaryfinal(v.Local.i)!date_invoice)
+'	F.Intrinsic.String.Format(V.local.dinvdate,"YYYY-MM-DD",V.local.dinvdate)
+	F.Intrinsic.String.Format(V.uGlobal.uSummaryFinal(v.Local.i)!DATE_INVOICE,"YYYY-MM-DD",V.Local.dinvdate)
+
+'	'set the invoice date and then format it
+'	V.local.dinvdate.set(V.uGlobal.uSummaryfinal(v.Local.i)!date_invoice)
+'	F.Intrinsic.String.Format(V.local.dinvdate,"YYYY-MM-DD",V.local.dinvdate)
+
+	'less than 31 days
+	F.Intrinsic.Date.DateAdd("D",30,V.local.dinvdate,V.Local.dL31)
+	F.Intrinsic.String.Format(V.local.dL31,"YYYY-MM-DD",V.local.scompl31)
+
+	'between 31 and 45
+	F.Intrinsic.Date.DateAdd("D",45,V.local.dinvdate,V.Local.d3145)
+	F.Intrinsic.String.Format(V.local.d3145,"YYYY-MM-DD",V.local.scomp3145)
+
+	'between 46 and 55
+	F.Intrinsic.Date.DateAdd("D",55,V.local.dinvdate,V.Local.d4655)
+	F.Intrinsic.String.Format(V.local.d4655,"YYYY-MM-DD",V.local.scomp4655)
+
+	'between 56 and 60
+	F.Intrinsic.Date.DateAdd("D",60,V.local.dinvdate,V.Local.d5660)
+	F.Intrinsic.String.Format(V.local.d5660,"YYYY-MM-DD",V.local.scomp5660)
+
+	'or 60
+	F.Intrinsic.Date.DateAdd("D",61,V.local.dinvdate,V.Local.dO60)
+	F.Intrinsic.String.Format(V.local.d5660,"YYYY-MM-DD",V.local.scompO60)
+
+	'check to see if less than 31 days
+	F.Intrinsic.Control.If(V.local.scurrentdate,<=,V.Local.scompl31)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp3145)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp4655)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp5660)
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scompO60)
+		V.uGlobal.uSummaryFinal(v.Local.i)!L31.Set(V.uGlobal.uSummaryFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.f31,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.Global.f31)
+'	F.Intrinsic.Control.EndIf
+
+	'31 - 45
+	F.Intrinsic.Control.elseIf(V.local.scurrentdate,>=,V.Local.scompl31)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp3145)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp4655)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp5660)
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scompO60)
+		V.uGlobal.uSummaryFinal(v.Local.i)!3145.Set(V.uGlobal.uSummaryFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.f3145,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.Global.f3145)
+	'46 - 55
+	F.Intrinsic.Control.ElseIf(V.Local.scurrentdate,>=,V.Local.scomp3145)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp4655)
+'ranjit
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,>=,V.Local.scomp4655)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scomp5660)
+'	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<=,V.Local.scompO60)
+		V.uGlobal.uSummaryFinal(v.Local.i)!4655.Set(V.uGlobal.uSummaryFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.f4655,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.Global.f4655)
+	'56-60
+F.Intrinsic.Debug.Stop
+
+	F.Intrinsic.Control.elseIf(V.Local.scurrentdate,>=,V.Local.scomp4655)
+'	F.Intrinsic.Control.elseIf(V.Local.scurrentdate,>=,V.Local.scomp5660)
+	F.Intrinsic.Control.AndIf(V.Local.scurrentdate,<,V.Local.scomp5660)
+		V.uGlobal.uSummaryFinal(v.Local.i)!5660.Set(V.uGlobal.uSummaryFinal(v.Local.i)!AMT)
+		F.Intrinsic.math.Add(V.Global.f5660,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.Global.f5660)
+	'over 60
+	F.Intrinsic.Control.ElseIf(V.Local.scurrentdate,>=,V.Local.scompO60)
+		V.uGlobal.uSummaryFinal(v.Local.i)!O60.Set(V.uGlobal.uSummaryFinal(v.Local.i)!AMT)
+		F.Intrinsic.Math.Add(V.Global.fO60,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.global.fO60)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Debug.Stop
+
+
+F.Intrinsic.Control.Next(V.Local.i)
+
+'get a total of all outstanding items
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f31,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f3145,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f4655,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.f5660,V.Global.fGrand)
+F.Intrinsic.Math.Add(V.Global.fGrand,V.Global.fO60,V.Global.fGrand)
+
+'call the summary export sub
+F.Intrinsic.Control.CallSub(Summaryexport)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Summary_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Summary.End
+
+Program.Sub.SummaryExport.Start
+F.Intrinsic.Control.SetErrorHandler("SummaryExport_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sfile.Declare(String)
+V.Local.bexists.Declare(Boolean)
+V.Local.sfullpath.Declare(String)
+V.Local.sfilename.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.stitles.Declare(String)
+V.Local.sline.Declare(String)
+V.Local.sgrandline.Declare(String)
+V.Local.sdate.Declare(String)
+V.Local.scust.Declare(String)
+V.Local.fL31.Declare(Float)
+
+V.Local.f3145.Declare(Float)
+V.Local.f4655.Declare(Float)
+V.Local.f5660.Declare(Float)
+V.Local.fO60.Declare(Float)
+V.Local.famt.Declare(Float)
+
+V.Local.iback.Declare(Long)
+
+'inform the user that the export is happening
+F.Intrinsic.UI.InvokeWaitDialog("Generating Export Files...")
+
+'build the filepath
+F.Intrinsic.String.build("{0}{1}",V.Caller.FilesDir,"\AR_Aging",V.Local.sfile)
+'see if the folder exists
+F.Intrinsic.File.Exists(V.Local.sfile,V.Local.bexists)
+
+'if the file doesn't exists create it
+F.Intrinsic.Control.If(V.Local.bexists,=,False)
+	F.Intrinsic.File.CreateDir(V.Local.sfile)
+F.Intrinsic.Control.EndIf
+
+'set the date and format it
+V.Local.sdate.Set(V.Ambient.Date)
+F.Intrinsic.String.Replace(V.Local.sdate,"/","",V.Local.sdate)
+
+'build the filename
+F.Intrinsic.String.Build("{0}_{1}_{2}{3}","AR_Aging",V.Local.sDate,V.Caller.Terminal,".csv",V.Local.sfilename)
+
+'build the full path
+F.Intrinsic.String.Build("{0}\{1}",V.local.sfile,V.Local.sfilename,V.Local.sfullpath)
+
+'loop through the UDT and build the string of data
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uSummaryFinal.LBound,V.uGlobal.uSummaryFinal.UBound,1)
+	F.Intrinsic.String.Replace(V.uGlobal.uSummaryFinal(v.Local.i)!NAME_CUSTOMER,",","",V.uGlobal.uSummaryFinal(v.Local.i)!NAME_CUSTOMER)
+	'if it is the first time around get the column titles
+	F.Intrinsic.Control.If(V.Local.i,=,0)
+		V.Local.scust.Set(V.uGlobal.uSummaryFinal(v.Local.i)!CUSTOMER)
+		F.Intrinsic.String.Build("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}","Customer ID","Customer Name","Sales Person","Terms","< 31 Days"," 31 - 45 Days","46 - 55 Days","56 - 60 Days","Over 60 Days","OpenBalance","LastPayment",V.local.stitles)
+		F.Intrinsic.Math.Add(V.Local.fL31,V.uGlobal.uSummaryFinal(v.Local.i)!L31,V.Local.fL31)
+		F.Intrinsic.Math.Add(V.Local.f3145,V.uGlobal.uSummaryFinal(v.Local.i)!3145,V.Local.f3145)
+		F.Intrinsic.Math.Add(V.Local.f4655,V.uGlobal.uSummaryFinal(v.Local.i)!4655,V.Local.f4655)
+		F.Intrinsic.Math.Add(V.Local.f5660,V.uGlobal.uSummaryFinal(v.Local.i)!5660,V.Local.f5660)
+		F.Intrinsic.Math.Add(V.Local.fO60,V.uGlobal.uSummaryFinal(v.Local.i)!O60,V.Local.fO60)
+		F.Intrinsic.Math.Add(V.Local.famt,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.Local.famt)
+'		F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.stitles,V.ambient.newline,V.uGlobal.uSummaryFinal(v.Local.i)!CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.i)!NAME_CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.i)!SALESPERSON,V.uGlobal.uSummaryFinal(v.Local.i)!TERMS,V.uGlobal.uSummaryFinal(v.Local.i)!L31,V.uGlobal.uSummaryFinal(v.Local.i)!3145,V.uGlobal.uSummaryFinal(v.Local.i)!4655,V.uGlobal.uSummaryFinal(v.Local.i)!5660,V.uGlobal.uSummaryFinal(v.Local.i)!O60,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.uGlobal.uSummaryFinal(v.Local.i)!DATE_TRANSACTION,V.Local.sline)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Local.scust,<>,V.uGlobal.uSummaryFinal(v.Local.i)!CUSTOMER)
+			V.Local.iback.Set(V.Local.i)
+			F.Intrinsic.Math.Sub(V.Local.iback,1,V.Local.iback)
+			F.Intrinsic.Control.If(V.Local.sline,=,"")
+				F.Intrinsic.String.Build("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}",V.uGlobal.uSummaryFinal(v.Local.iback)!CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.iback)!NAME_CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.iback)!SALESPERSON,V.uGlobal.uSummaryFinal(v.Local.iback)!TERMS,V.local.fL31,V.Local.f3145,V.Local.f4655,V.Local.f5660,V.local.fO60,V.local.famt,V.uGlobal.uSummaryFinal(v.Local.iback)!DATE_TRANSACTION,V.Local.sline)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,V.uGlobal.uSummaryFinal(v.Local.iback)!CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.iback)!NAME_CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.iback)!SALESPERSON,V.uGlobal.uSummaryFinal(v.Local.iback)!TERMS,V.local.fL31,V.Local.f3145,V.Local.f4655,V.Local.f5660,V.local.fO60,V.local.famt,V.uGlobal.uSummaryFinal(v.Local.iback)!DATE_TRANSACTION,V.Local.sline)
+			F.Intrinsic.Control.EndIf
+			V.Local.famt.Set(0)
+			V.Local.fL31.Set(0)
+			V.Local.f3145.Set(0)
+			V.Local.f4655.Set(0)
+			V.Local.f5660.Set(0)
+			V.Local.fO60.Set(0)
+			F.Intrinsic.Math.Add(V.Local.fL31,V.uGlobal.uSummaryFinal(v.Local.i)!L31,V.Local.fL31)
+			F.Intrinsic.Math.Add(V.Local.f3145,V.uGlobal.uSummaryFinal(v.Local.i)!3145,V.Local.f3145)
+			F.Intrinsic.Math.Add(V.Local.f4655,V.uGlobal.uSummaryFinal(v.Local.i)!4655,V.Local.f4655)
+			F.Intrinsic.Math.Add(V.Local.f5660,V.uGlobal.uSummaryFinal(v.Local.i)!5660,V.Local.f5660)
+			F.Intrinsic.Math.Add(V.Local.fO60,V.uGlobal.uSummaryFinal(v.Local.i)!O60,V.Local.fO60)
+			F.Intrinsic.Math.Add(V.Local.famt,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.Local.famt)
+			V.Local.scust.Set(V.uGlobal.uSummaryFinal(v.Local.i)!CUSTOMER)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Math.Add(V.Local.fL31,V.uGlobal.uSummaryFinal(v.Local.i)!L31,V.Local.fL31)
+			F.Intrinsic.Math.Add(V.Local.f3145,V.uGlobal.uSummaryFinal(v.Local.i)!3145,V.Local.f3145)
+			F.Intrinsic.Math.Add(V.Local.f4655,V.uGlobal.uSummaryFinal(v.Local.i)!4655,V.Local.f4655)
+			F.Intrinsic.Math.Add(V.Local.f5660,V.uGlobal.uSummaryFinal(v.Local.i)!5660,V.Local.f5660)
+			F.Intrinsic.Math.Add(V.Local.fO60,V.uGlobal.uSummaryFinal(v.Local.i)!O60,V.Local.fO60)
+			F.Intrinsic.Math.Add(V.Local.famt,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.Local.famt)
+			V.Local.scust.Set(V.uGlobal.uSummaryFinal(v.Local.i)!CUSTOMER)
+'		F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,V.uGlobal.uSummaryFinal(v.Local.i)!CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.i)!NAME_CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.i)!SALESPERSON,V.uGlobal.uSummaryFinal(v.Local.i)!TERMS,V.uGlobal.uSummaryFinal(v.Local.i)!L31,V.uGlobal.uSummaryFinal(v.Local.i)!3145,V.uGlobal.uSummaryFinal(v.Local.i)!4655,V.uGlobal.uSummaryFinal(v.Local.i)!5660,V.uGlobal.uSummaryFinal(v.Local.i)!O60,V.uGlobal.uSummaryFinal(v.Local.i)!AMT,V.uGlobal.uSummaryFinal(v.Local.i)!DATE_TRANSACTION,V.Local.sline)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i)
+
+V.Local.iback.Set(V.uglobal.uSummaryFinal.UBound)
+F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,V.uGlobal.uSummaryFinal(v.Local.iback)!CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.iback)!NAME_CUSTOMER,V.uGlobal.uSummaryFinal(v.Local.iback)!SALESPERSON,V.uGlobal.uSummaryFinal(v.Local.iback)!TERMS,V.local.fL31,V.Local.f3145,V.Local.f4655,V.Local.f5660,V.local.fO60,V.local.famt,V.uGlobal.uSummaryFinal(v.Local.iback)!DATE_TRANSACTION,V.Local.sline)
+
+F.Intrinsic.String.Build("{0}{1}{2}",V.local.stitles,V.Ambient.NewLine,V.Local.sline,V.Local.sline)
+'build the total line
+F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,"","","","Totals",V.Global.f31,V.Global.f3145,V.Global.f4655,V.Global.f5660,V.Global.fO60,"","",V.local.sline)
+'build the grand total line
+F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,"","","","","","","","","","Grand Total Outstanding",V.Global.fGrand,V.local.sline)
+
+'check to make sure the file exists
+F.Intrinsic.File.Exists(V.Local.sfullpath,V.Local.bexists)
+
+'if found delete and re-write it
+F.Intrinsic.Control.if(V.local.bexists,=,False)
+	F.Intrinsic.File.String2File(V.Local.sfullpath,V.Local.sline)
+F.Intrinsic.Control.Else
+	F.Intrinsic.File.DeleteFile(V.Local.sfullpath)
+	F.Intrinsic.File.String2File(V.Local.sfullpath,V.Local.sline)
+F.Intrinsic.Control.EndIf
+
+'close the wait dialog
+F.Intrinsic.UI.CloseWaitDialog
+
+'inform the user export is finished
+F.Intrinsic.UI.Msgbox("Export Complete")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SummaryExport_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SummaryExport.End
+
+Program.Sub.DetailExport.Start
+F.Intrinsic.Control.SetErrorHandler("DetailExport_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sfile.Declare(String)
+V.Local.bexists.Declare(Boolean)
+V.Local.sfullpath.Declare(String)
+V.Local.sfilename.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.stitles.Declare(String)
+V.Local.sline.Declare(String)
+V.Local.sgrandline.Declare(String)
+V.Local.sdate.Declare(String)
+
+V.Local.scust.Declare(String)
+V.Local.fl31.Declare(Float)
+V.Local.f3145.Declare(Float)
+V.Local.f4655.Declare(Float)
+V.Local.f5660.Declare(Float)
+V.Local.fO60.Declare(Float)
+
+'inform the user that the export is happening
+F.Intrinsic.UI.InvokeWaitDialog("Generating Export Files...")
+
+'build the filepath
+F.Intrinsic.String.build("{0}{1}",V.Caller.FilesDir,"\AR_Aging",V.Local.sfile)
+'see if the folder exists
+F.Intrinsic.File.Exists(V.Local.sfile,V.Local.bexists)
+
+'if the file doesn't exists create it
+F.Intrinsic.Control.If(V.Local.bexists,=,False)
+	F.Intrinsic.File.CreateDir(V.Local.sfile)
+F.Intrinsic.Control.EndIf
+
+'set the date and format it
+V.Local.sdate.Set(V.Ambient.Date)
+F.Intrinsic.String.Replace(V.Local.sdate,"/","",V.Local.sdate)
+
+'build the filename
+F.Intrinsic.String.Build("{0}_{1}_{2}{3}","AR_Aging",V.Local.sDate,V.Caller.Terminal,".csv",V.Local.sfilename)
+
+'build the full path
+F.Intrinsic.String.Build("{0}\{1}",V.local.sfile,V.Local.sfilename,V.Local.sfullpath)
+
+'loop through the UDT and build the string of data
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uDetailFinal.LBound,V.uGlobal.uDetailFinal.UBound,1)
+	F.Intrinsic.String.Replace(V.uGlobal.uDetailFinal(v.Local.i)!NAME_CUSTOMER,",","",V.uGlobal.uDetailFinal(v.Local.i)!NAME_CUSTOMER)
+
+	'if it is the first time around get the column titles
+	F.Intrinsic.Control.If(V.Local.i,=,0)
+		F.Intrinsic.String.Build("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}","Customer ID","Customer Name","Invoice Date","Invoice Number","Sales Person","Terms","< 31 Days"," 31 - 45 Days","46 - 55 Days","56 - 60 Days","Over 60 Days",V.local.stitles)
+		F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.stitles,V.ambient.newline,V.uGlobal.uDetailFinal(v.Local.i)!CUSTOMER,V.uGlobal.uDetailFinal(v.Local.i)!NAME_CUSTOMER,V.uglobal.udetailFinal(v.local.i)!DATE_INVOICE,V.uglobal.udetailFinal(v.local.i)!INVOICE,V.uGlobal.uDetailFinal(v.Local.i)!SALESPERSON,V.uGlobal.uDetailFinal(v.Local.i)!TERMS,V.uGlobal.uDetailFinal(v.Local.i)!L31,V.uGlobal.uDetailFinal(v.Local.i)!3145,V.uGlobal.uDetailFinal(v.Local.i)!4655,V.uGlobal.uDetailFinal(v.Local.i)!5660,V.uGlobal.uDetailFinal(v.Local.i)!O60,V.Local.sline)
+		V.Local.fl31.Set(V.uGlobal.uDetailFinal(v.Local.i)!L31)
+		V.Local.f3145.Set(V.uGlobal.uDetailFinal(v.Local.i)!3145)
+		V.Local.f4655.Set(V.uGlobal.uDetailFinal(v.Local.i)!4655)
+		V.Local.f5660.Set(V.uGlobal.uDetailFinal(v.Local.i)!5660)
+		V.Local.fO60.Set(V.uGlobal.uDetailFinal(v.Local.i)!O60)
+	F.Intrinsic.Control.Else
+		'if the customers do no match, we assume it is a new customer, put the totals in the line and write the first line for the new customer
+		F.Intrinsic.Control.If(V.Local.scust,<>,V.uGlobal.uDetailFinal(v.Local.i)!CUSTOMER)
+		'build the total line
+		F.Intrinsic.String.Build("{0}{1}{2},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13}",V.local.sline,V.ambient.newline,"","","","","Totals",V.local.fl31,V.local.f3145,V.local.f4655,V.local.f5660,V.local.fO60,"","",V.local.sline)
+		F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,V.uGlobal.uDetailFinal(v.Local.i)!CUSTOMER,V.uGlobal.uDetailFinal(v.Local.i)!NAME_CUSTOMER,V.uglobal.udetailFinal(v.local.i)!DATE_INVOICE,V.uglobal.udetailFinal(v.local.i)!INVOICE,V.uGlobal.uDetailFinal(v.Local.i)!SALESPERSON,V.uGlobal.uDetailFinal(v.Local.i)!TERMS,V.uGlobal.uDetailFinal(v.Local.i)!L31,V.uGlobal.uDetailFinal(v.Local.i)!3145,V.uGlobal.uDetailFinal(v.Local.i)!4655,V.uGlobal.uDetailFinal(v.Local.i)!5660,V.uGlobal.uDetailFinal(v.Local.i)!O60,V.Local.sline)
+			V.Local.fl31.Set(V.uGlobal.uDetailFinal(v.Local.i)!L31)
+			V.Local.f3145.Set(V.uGlobal.uDetailFinal(v.Local.i)!3145)
+			V.Local.f4655.Set(V.uGlobal.uDetailFinal(v.Local.i)!4655)
+			V.Local.f5660.Set(V.uGlobal.uDetailFinal(v.Local.i)!5660)
+			V.Local.fO60.Set(V.uGlobal.uDetailFinal(v.Local.i)!O60)
+		'otherwise if the customers do match we assume it is the same customer and write a line with a blank customer and add to each local total
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}{1}{2},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,"",V.uglobal.udetailFinal(v.local.i)!DATE_INVOICE,V.uglobal.udetailFinal(v.local.i)!INVOICE,V.uGlobal.uDetailFinal(v.Local.i)!SALESPERSON,V.uGlobal.uDetailFinal(v.Local.i)!TERMS,V.uGlobal.uDetailFinal(v.Local.i)!L31,V.uGlobal.uDetailFinal(v.Local.i)!3145,V.uGlobal.uDetailFinal(v.Local.i)!4655,V.uGlobal.uDetailFinal(v.Local.i)!5660,V.uGlobal.uDetailFinal(v.Local.i)!O60,V.Local.sline)
+			F.Intrinsic.Math.Add(V.Local.fl31,V.uGlobal.uDetailFinal(v.Local.i)!L31,V.Local.fl31)
+			F.Intrinsic.Math.Add(V.Local.f3145,V.uGlobal.uDetailFinal(v.Local.i)!3145,V.Local.f3145)
+			F.Intrinsic.Math.Add(V.Local.f4655,V.uGlobal.uDetailFinal(v.Local.i)!4655,V.Local.f4655)
+			F.Intrinsic.Math.Add(V.Local.f5660,V.uGlobal.uDetailFinal(v.Local.i)!5660,V.Local.f5660)
+			F.Intrinsic.Math.Add(V.Local.fO60,V.uGlobal.uDetailFinal(v.Local.i)!O60,V.Local.fO60)
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.EndIf
+	V.Local.scust.Set(V.uGlobal.uDetailFinal(v.Local.i)!CUSTOMER)
+
+F.Intrinsic.Control.Next(V.Local.i)
+
+'build the total line
+F.Intrinsic.String.Build("{0}{1}{2},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13}",V.local.sline,V.ambient.newline,"","","","","Totals",V.Global.f31,V.Global.f3145,V.Global.f4655,V.Global.f5660,V.Global.fO60,"","",V.local.sline)
+'build the grand total line
+F.Intrinsic.String.Build("{0}{1}{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",V.local.sline,V.ambient.newline,"","","","","","","","","","Grand Total Outstanding",V.Global.fGrand,V.local.sline)
+
+'check to make sure the file exists
+F.Intrinsic.File.Exists(V.Local.sfullpath,V.Local.bexists)
+
+'if found delete and re-write it
+F.Intrinsic.Control.if(V.local.bexists,=,False)
+	F.Intrinsic.File.String2File(V.Local.sfullpath,V.Local.sline)
+F.Intrinsic.Control.Else
+	F.Intrinsic.File.DeleteFile(V.Local.sfullpath)
+	F.Intrinsic.File.String2File(V.Local.sfullpath,V.Local.sline)
+F.Intrinsic.Control.EndIf
+
+
+'close the wait dialog
+F.Intrinsic.UI.CloseWaitDialog
+
+'inform the user export is finished
+F.Intrinsic.UI.Msgbox("Export Complete")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("DetailExport_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.DetailExport.End
+
+program.sub.chkallcust_click.start
+F.Intrinsic.Control.SetErrorHandler("chkallcust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+'check to see if the checkbox is checked, if so clear the textboxes
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllCust.Value,=,1)
+	Gui.Form1.txtBegCust.Text("")
+	Gui.Form1.txtEndingCust.Text("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkallcust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+'	Function.Intrinsic.String.Concat("Project: GCG_4139_AR_Aging.gas",V.Ambient.Newline,V.Ament.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkallcust_click.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_4139_AR_Aging$}$WAW$}$6/24/2016$}$False
+Program.Sub.Comments.End
+
